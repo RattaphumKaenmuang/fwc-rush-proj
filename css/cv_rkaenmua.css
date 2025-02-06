@@ -1,0 +1,35 @@
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/*========== Root/Body Section ==========*/
+:root {
+    --header-bg-color: #333;
+
+    --light-bg-color: #FAEBEFFF;
+    --dark-bg-color: #333D79FF;
+
+    /*font size               min   preferred max   */
+    --title-font-size:  clamp(30px, 2vw,      300px);
+    --name-font-size:   clamp(35px, 5vw,      400px);
+    --others-font-size: clamp(30px, 1.5vw,    300px);
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Oswald", serif;
+}
+
+/*========== Header Section ==========*/
+header {
+    display: flex;
+    width: 100vw;
+
+    background-color: #333;
+    color: white;
+    z-index: 99999;
+}
+header h1 {
+    margin: 1%;
+    font-size: var(--title-font-size);
+}
