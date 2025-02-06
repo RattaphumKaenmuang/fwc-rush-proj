@@ -1,0 +1,110 @@
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/*========== Root/Body Section ==========*/
+:root {
+    --header-bg-color: #333;
+
+    --light-bg-color: #FAEBEFFF;
+    --dark-bg-color: #333D79FF;
+
+    /*font size               min   preferred max   */
+    --title-font-size:  clamp(30px, 2vw,      300px);
+    --name-font-size:   clamp(35px, 5vw,      400px);
+    --others-font-size: clamp(30px, 1.5vw,    300px);
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Oswald", serif;
+}
+
+/*========== Header Section ==========*/
+header {
+    display: flex;
+    width: 100vw;
+
+    background-color: #333;
+    color: white;
+    z-index: 99999;
+}
+header h1 {
+    margin: 1%;
+    font-size: var(--title-font-size);
+}
+
+/*========== Main Content ==========*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--light-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/*========== About Section ==========*/
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid var(--dark-bg-color);
+}
+
+.bio {
+    font-size: var(--others-font-size);
+    color: var(--dark-bg-color);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/*========== Showcase Section ==========*/
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/*========== Contact Section ==========*/
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: var(--dark-bg-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.github:hover { color: #333; }
+.linkedin:hover { color: #0077b5; }
+.instagram:hover { color: #e4405f; }
