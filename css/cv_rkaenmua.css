@@ -9,9 +9,8 @@
     --dark-bg-color: #333D79FF;
 
     /*font size               min   preferred max   */
-    --title-font-size:  clamp(30px, 2vw,      300px);
-    --name-font-size:   clamp(35px, 5vw,      400px);
-    --others-font-size: clamp(30px, 1.5vw,    300px);
+    --title-font-size:  clamp(10px, 2vw,      300px);
+    --others-font-size: clamp(8px,  1.5vw,    50px);
 }
 body {
     margin: 0;
@@ -30,12 +29,14 @@ header {
     position: fixed;
     width: 100vw;
     height: 10vh;
+    min-height: fit-content;
 
     background-color: #333;
     color: white;
     z-index: 99999;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+    
+    align-items: center;
 }
 header h1 {
     margin: 1%;
@@ -47,7 +48,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 3px;
 }
 nav ul {
     list-style-type: none; /* Remove bullet points */
@@ -56,9 +57,9 @@ nav ul {
     margin: 0;
 }
 nav li {
+    min-width: none;
     height: 100%;
     padding: 0 10px;
-    /* margin-right: 20px; */
     display: flex;
     align-items: center;
 
@@ -68,9 +69,22 @@ nav li:hover {
     cursor: pointer;
     background-color: aliceblue;
 }
+nav li:hover a {
+    filter: invert(1); /* Invert text color */
+}
+
+nav li:hover img {
+    filter: invert(1); /* Invert image color */
+}
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--others-font-size);
+    font-weight: bold;
+}
 nav img {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
+    max-width: 10%;
+    height: auto; /* Maintain aspect ratio */
+    margin: 3px 8px 3px 0;
     object-fit: contain;
 }
