@@ -1,32 +1,66 @@
-html, body {
+:root {
+    --header-bg-color: #333;
+
+    --light-bg-color: #FAEBEFFF;
+    --dark-bg-color: #333D79FF;
+
+    --font-size-large: 3vw;
+    --font-size-h1: 1.5vw;
+}
+body {
+    position: fixed;
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-family: "Oswald", serif;
+
+    background-color: black;
 }
 
+/*========== Header Section ==========*/
 header {
     display: flex;
+    width: 100vw;
+
     background-color: #333;
     color: white;
-    text-align: center;
-    box-sizing: border-box;
+    z-index: 99999;
+}
+header h1 {
+    margin: 1%;
+    font-size: 1.5vw;
 }
 
+
+/*========== left-right Section ==========*/
+/* parent container */
 #main-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+#main-container .cv-container {
+    font-size: 3vw;
 }
 
-#main-container > div {
-    flex: 1;
-    padding: 1%;
+/* modify both sides */
+.cv-container {
+    width: 50%;
+    height: 100%;
+    transition: filter 0.3s; 
+}
+.cv-container:hover {
+    cursor: pointer;
+    filter: brightness(0.5);
 }
 
-header h1 {
-    margin: 1%;
-    font-size: 1.5em;
+/* modify each side */
+#left-container { /*background-col and text-col switches places*/
+    background-color: var(--light-bg-color);
+    color: var(--dark-bg-color);
 }
-
-#left-container {
-    background-color: rgb(255, 225, 170);
+#right-container {
+    background-color: var(--dark-bg-color);
+    color: var(--light-bg-color);
 }
