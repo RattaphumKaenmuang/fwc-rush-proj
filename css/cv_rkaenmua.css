@@ -7,10 +7,11 @@
 
     --light-bg-color: #FAEBEFFF;
     --dark-bg-color: #333D79FF;
+    --dark-bg-color-grad: rgb(95, 108, 173);
 
     /*font size               min   preferred max   */
     --title-font-size:  clamp(10px, 2vw,      300px);
-    --name-font-size:   clamp(35px, 5vw,      400px);
+    --name-font-size:   clamp(20px, 5vw,      400px);
     --others-font-size: clamp(8px,  1.5vw,    50px);
 }
 body {
@@ -25,8 +26,10 @@ body {
 
 /*========== Header/Navbar Section ==========*/
 header {
-    display: flex;
     position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
     width: 100vw;
     height: 10vh;
     min-height: fit-content;
@@ -40,4 +43,78 @@ header h1 {
     margin: 1%;
     font-size: var(--title-font-size);
     white-space: nowrap;
+}
+/*========== Main Section ==========*/
+
+main {
+    max-width: 80%;
+    margin: 12vh auto 0; /* Add top margin to account for fixed header */
+    color: var(--light-bg-color);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: fit-content;
+    height: auto;
+
+    padding: 2rem;
+
+    margin: 0 auto;
+    border-radius: 20px;
+    
+    margin: 2rem auto;
+    background: linear-gradient(135deg, var(--dark-bg-color) 0%, var(--dark-bg-color-grad) 100%);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+/*========== 1: Profile ==========*/
+.profile-container {
+    text-align: center;
+}
+#profile-img {
+    width: 25%;
+    height: auto;
+    border: 4px solid var(--light-bg-color);
+    border-radius: 50%;
+    box-shadow: 0 7px 7px rgba(0,0,0,0.1);
+}
+#name {
+    font-size: var(--name-font-size);
+    margin: 1rem;
+}
+#desc {
+    font-size: var(--others-font-size);
+    font-weight: normal;
+    margin: 1rem;
+}
+hr {
+    width: 80%;
+    margin: 1rem auto;
+    border: 1px solid var(--light-bg-color);
+}
+
+/* Long summary */
+#summary{
+    display: flex;
+    flex-direction: column;
+    
+    font-size: var(--others-font-size);
+}
+#summary #about-header {
+    display: flex;
+    align-items: center;
+    font-size: var(--others-font-size);
+}
+#about-header #info-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 426px) {
+    #profile-img{
+        width: 30%;
+    }
 }

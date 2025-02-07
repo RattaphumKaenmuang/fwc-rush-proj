@@ -4,8 +4,8 @@
 /*========== Root/Body Section ==========*/
 :root {
     /*font size               min   preferred max   */
-    --rush-font-size:   clamp(4px, 3vw,      15px);
-    --navbar-font-size: clamp(15px, 2vw,      20px);
+    --rush-font-size:   clamp(4px,  3vw,     15px);
+    --navbar-font-size: clamp(4px,  2vw,     20px);
 }
 
 nav {
