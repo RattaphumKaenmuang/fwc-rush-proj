@@ -136,6 +136,49 @@ main {
     gap: 0.5rem;
 }
 
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.summary-main, .summary-focus {
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.key-achievements {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.key-achievements h4 {
+    color: var(--dark-bg-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.key-achievements ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.key-achievements li {
+    padding: 0.5rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /*========== Showcase Section ==========*/
 .skills-grid {
     display: grid;
