@@ -10,9 +10,9 @@
     --header-bg-color: #333;
     --light-bg-color: #FAEBEFFF;
     --dark-bg-color: #333D79FF;
-    --title-font-size: clamp(10px, 2vw, 300px);
-    --name-font-size: clamp(35px, 5vw, 400px);
-    --others-font-size: clamp(8px, 1.5vw, 50px);
+    --title-font-size: clamp(15px, 2vw, 100px);
+    --name-font-size: clamp(35px, 5vw, 100px);
+    --others-font-size: clamp(15px, 1.5vw, 40px);
 }
 
 /* Base styles for clean layout */
@@ -201,6 +201,7 @@ main {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 1;
 }
 
 .skill-card ul {
@@ -311,23 +312,12 @@ main {
     background: #f0f9ff;
 }
 
-/* Animated typing effect for name */
-#typing-name {
+/* simple name style */
+.name {
     font-size: var(--name-font-size);
     color: var(--dark-bg-color);
     text-align: center;
     margin: 1rem 0;
-    border-right: 3px solid var(--dark-bg-color);
-    white-space: nowrap;
-    overflow: hidden;
-    /* Cursor blink animation */
-    animation: cursor-blink 0.75s step-end infinite;
-}
-
-/* Keyframe animation for cursor blinking */
-@keyframes cursor-blink {
-    from, to { border-color: transparent }
-    50% { border-color: var(--dark-bg-color) }
 }
 
 /* Add to existing styles */
@@ -358,7 +348,8 @@ main {
 
 /* Remove old achievements styling */
 .achievements-grid,
-.achievement-card {
+.achievement-card,
+.visible {
     display: none;
 }
 
