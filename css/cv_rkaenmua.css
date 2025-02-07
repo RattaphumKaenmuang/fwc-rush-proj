@@ -118,3 +118,17 @@ hr {
         width: 30%;
     }
 }
+
+/*========== 2: Experiences ==========*/
+.list-blocks-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.list-block {
+    color: var(--dark-bg-color);
+    background-color: var(--light-bg-color);
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 7px 7px rgba(0,0,0,0.2);
+}
