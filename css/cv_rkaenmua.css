@@ -190,6 +190,9 @@ hr {
     background-color: var(--light-bg-color);
     color: var(--dark-bg-color);
 }
+.contact-method:hover {
+    filter: brightness(0.75);
+}
 .contact-method img {
     width: 80%;
     height: auto;
