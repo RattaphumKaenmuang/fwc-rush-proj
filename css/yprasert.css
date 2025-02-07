@@ -1,18 +1,21 @@
-/* importing fonts */
+/* Importing Oswald font from Google Fonts for consistent typography */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-/*========== Root/Body Section ==========*/
+/* Global Variables for consistent theming and responsive design
+ * --light-bg-color: Light background for containers
+ * --dark-bg-color: Primary color for headings and accents
+ * Responsive font sizes using clamp(min, preferred, max) 
+ */
 :root {
     --header-bg-color: #333;
-
     --light-bg-color: #FAEBEFFF;
     --dark-bg-color: #333D79FF;
-
-    /*font size               min   preferred max   */
-    --title-font-size:  clamp(10px, 2vw,      300px);
-    --name-font-size:   clamp(35px, 5vw,      400px);
-    --others-font-size: clamp(8px, 1.5vw,    50px);
+    --title-font-size: clamp(10px, 2vw, 300px);
+    --name-font-size: clamp(35px, 5vw, 400px);
+    --others-font-size: clamp(8px, 1.5vw, 50px);
 }
+
+/* Base styles for clean layout */
 body {
     margin: 0;
     padding: 0;
@@ -23,14 +26,14 @@ body {
      box-sizing: border-box;
  }
 
-/*========== Header Section ==========*/
+/* Fixed header layout with shadow and high z-index for overlay */
 header {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
     width: 100vw;
     height: 10vh;
+    display: flex;
     min-height: fit-content;
     background-color: #333;
     color: white;
@@ -44,13 +47,14 @@ header h1 {
     white-space: nowrap;
 }
 
-/*========== Main Content ==========*/
+/* Main content layout with responsive max-width and margin for fixed header */
 main {
     max-width: 1200px;
     margin: 12vh auto 0; /* Add top margin to account for fixed header */
     padding: 2rem;
 }
 
+/* Container styling with hover animation and shadow effects */
 .container {
     margin: 2rem auto;
     padding: 2rem;
@@ -64,17 +68,20 @@ main {
     transform: translateY(-5px);
 }
 
-/*========== About Section ==========*/
+/* Profile section styling */
 .bio-container {
+    /* Gradient background for visual interest */
     background: linear-gradient(135deg, var(--light-bg-color) 0%, #fff 100%);
 }
 
 .profile-section {
+    /* Centered layout for profile elements */
     text-align: center;
     position: relative;
     padding-bottom: 2rem;
 }
 
+/* Profile image with circular crop and hover animation */
 .profile-img {
     width: 200px;
     height: 200px;
@@ -98,6 +105,7 @@ main {
     margin: 1rem 0;
 }
 
+/* Contact badges with flex layout and subtle shadow */
 .bio-badges {
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +187,7 @@ main {
     gap: 0.5rem;
 }
 
-/*========== Showcase Section ==========*/
+/* Skills section with responsive grid layout */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -187,6 +195,7 @@ main {
     margin-top: 2rem;
 }
 
+/* Skill cards with consistent styling and icon alignment */
 .skill-card {
     background: white;
     padding: 1.5rem;
@@ -228,7 +237,7 @@ main {
     text-align: center;
 }
 
-/*========== Contact Section ==========*/
+/* Contact section with centered layout and gradient background */
 .contact-container {
     background: linear-gradient(135deg, var(--light-bg-color) 0%, #fff 100%);
     text-align: center;
@@ -254,6 +263,7 @@ main {
     color: #555;
 }
 
+/* Social media links with hover effects and brand colors */
 .social-links {
     display: flex;
     justify-content: center;
@@ -301,6 +311,7 @@ main {
     background: #f0f9ff;
 }
 
+/* Animated typing effect for name */
 #typing-name {
     font-size: var(--name-font-size);
     color: var(--dark-bg-color);
@@ -309,9 +320,11 @@ main {
     border-right: 3px solid var(--dark-bg-color);
     white-space: nowrap;
     overflow: hidden;
+    /* Cursor blink animation */
     animation: cursor-blink 0.75s step-end infinite;
 }
 
+/* Keyframe animation for cursor blinking */
 @keyframes cursor-blink {
     from, to { border-color: transparent }
     50% { border-color: var(--dark-bg-color) }
@@ -349,6 +362,7 @@ main {
     display: none;
 }
 
+/* Experience cards with flex layout for dynamic content */
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -363,6 +377,7 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     min-height: 200px;
+    /* Flexible column layout with space-between for content */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
