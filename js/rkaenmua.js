@@ -23,6 +23,6 @@ $(document).ready(function(){
     }
 
     randomise_text($("#name"), 15);
-    randomise_text($("#desc"), 15);
+    randomise_text($("#desc"), 10);
     randomise_text($("#long-desc"), 5);
 });
