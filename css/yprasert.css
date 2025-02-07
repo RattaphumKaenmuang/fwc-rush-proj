@@ -16,7 +16,6 @@
 body {
     margin: 0;
     padding: 0;
-
     font-family: "Oswald", serif;
 }
 
@@ -26,10 +25,13 @@ body {
 
 /*========== Header Section ==========*/
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    
     width: 100vw;
     height: 10vh;
+    min-height: fit-content;
     background-color: #333;
     color: white;
     z-index: 99999;
@@ -42,55 +44,10 @@ header h1 {
     white-space: nowrap;
 }
 
-nav {
-     display: flex;
-     justify-content: flex-end;
-     width: 100%;
-     padding: 0 3px;
- }
- nav ul {
-     list-style-type: none; /* Remove bullet points */
-     display: flex;
-     padding: 0;
-     margin: 0;
- }
- nav li {
-     min-width: none;
-     height: 100%;
-     padding: 0 10px;
-     display: flex;
-     align-items: center;
- 
-     border: 1px solid black;
- }
- nav li:hover {
-     cursor: pointer;
-     background-color: aliceblue;
- }
- nav li:hover a {
-     filter: invert(1); /* Invert text color */
- }
- 
- nav li:hover img {
-     filter: invert(1); /* Invert image color */
- }
- nav li a {
-     text-decoration: none;
-     color: white;
-     font-size: var(--others-font-size);
-     font-weight: bold;
- }
- nav img {
-     max-width: 10%;
-     height: auto; /* Maintain aspect ratio */
-     margin: 3px 8px 3px 0;
-     object-fit: contain;
- }
-
 /*========== Main Content ==========*/
 main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 12vh auto 0; /* Add top margin to account for fixed header */
     padding: 2rem;
 }
 
@@ -108,6 +65,16 @@ main {
 }
 
 /*========== About Section ==========*/
+.bio-container {
+    background: linear-gradient(135deg, var(--light-bg-color) 0%, #fff 100%);
+}
+
+.profile-section {
+    text-align: center;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
 .profile-img {
     width: 200px;
     height: 200px;
@@ -116,6 +83,12 @@ main {
     margin: 0 auto;
     display: block;
     border: 5px solid var(--dark-bg-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
 .bio {
@@ -123,6 +96,44 @@ main {
     color: var(--dark-bg-color);
     text-align: center;
     margin: 1rem 0;
+}
+
+.bio-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.badge {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--others-font-size);
+    color: var(--dark-bg-color);
+}
+
+.badge i {
+    color: var(--dark-bg-color);
+}
+
+.summary-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(0,0,0,0.1);
+}
+
+.summary-section h3 {
+    color: var(--dark-bg-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /*========== Showcase Section ==========*/
@@ -140,7 +151,66 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.skill-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-card li {
+    margin: 0.8rem 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-card li img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.skill-card li i {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-bg-color);
+}
+
+.skill-card h3 {
+    color: var(--dark-bg-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 /*========== Contact Section ==========*/
+.contact-container {
+    background: linear-gradient(135deg, var(--light-bg-color) 0%, #fff 100%);
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: var(--dark-bg-color);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -149,18 +219,44 @@ main {
 }
 
 .social-icon {
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2.5rem;
     color: var(--dark-bg-color);
     transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.social-icon span {
+    font-size: 1rem;
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
+    transform: translateY(-5px);
 }
 
-.github:hover { color: #333; }
-.linkedin:hover { color: #0077b5; }
-.instagram:hover { color: #e4405f; }
+/* Update social icon colors */
+.github:hover { 
+    color: #24292e; 
+    background: #f6f8fa;
+}
+.linkedin:hover { 
+    color: #0077b5; 
+    background: #e8f4f9;
+}
+.instagram:hover { 
+    color: #e4405f; 
+}
+.kaggle:hover { 
+    color: #20beff; 
+    background: #f0f9ff;
+}
 
 #typing-name {
     font-size: var(--name-font-size);
@@ -176,4 +272,86 @@ main {
 @keyframes cursor-blink {
     from, to { border-color: transparent }
     50% { border-color: var(--dark-bg-color) }
+}
+
+/* Add to existing styles */
+.contact-info {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: var(--others-font-size);
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    color: var(--dark-bg-color);
+}
+
+.summary {
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    color: #555;
+}
+
+.achievements-title {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--dark-bg-color);
+}
+
+/* Remove old achievements styling */
+.achievements-grid,
+.achievement-card {
+    display: none;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card h3 {
+    color: var(--dark-bg-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.experience-card .role {
+    color: #666;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+.experience-card p {
+    color: #555;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.experience-card .highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
 }

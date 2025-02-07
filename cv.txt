@@ -1,0 +1,91 @@
+Yongsuk Prasertsuk
+Bangkok, Thailand | yongsuk.work@gmail.com | (+66) 0925209893 | linkedin.com/in/yongsuks | github.com/yongsuk
+
+PROFESSIONAL SUMMARY
+
+
+Innovative Computer Engineering student and AI enthusiast with extensive hands-on experience in developing cutting-edge AI solutions. Demonstrated expertise in multi-agent systems, LLMs, and machine learning through successful participation in 10+ hackathons, including reaching Top 12 in TYPHOON Hackathon 2024 (SCB10X). Proficient in developing end-to-end AI applications, from RAG-enhanced chatbots to comprehensive educational platforms using state-of-the-art frameworks (LangChain, LangGraph). Passionate about leveraging AI technologies to solve real-world challenges in education, technology, and business domains.
+
+SKILLS
+
+
+Programming: Python (Proficient), C, C++, Rust, Golang, HTML/CSS, Javascript 
+Data Science: NumPy, Pandas, Matplotlib, Seaborn
+Artificial Intelligence: Scikit-Learn, Keras, OpenCV, TensorFlow, PyTorch, HuggingFace, LangChain, LangGraph
+Other Skills: Git and Github,  PostgreSQL, ChromaDB, Google Cloud Platform, Google Colab, Kaggle
+
+EXPERIENCE & PROJECTS
+
+Top 12 finalist TYPHOON Hackathon 2024 - SCB10X
+AI Engineer										                             June 2024
+Developed a Personalized Local Food Expertise Line Chatbot (JAY-JONG) for local food recommendations using LLM, Multi-agent AI, and a Recommendation System
+Managed the project from prototyping to deployment with Line Development tools and effective project management
+Enhanced response accuracy with Retrieval-Augmented Generation (RAG)
+AgentCraft Hackathon 2024 - DiamantAI
+AI Engineer											       November 2024
+Developed ATLAS (Academic Task and Learning Agent System), a multi-agent academic support system using LangGraph framework, featuring intelligent scheduling and content summarization capabilities through specialized AI agents (Coordinator, Planner, Notewriter, and Advisor)
+Engineered an integrated system architecture that processes academic content, optimizes schedules, and delivers personalized learning recommendations, demonstrating proficiency in AI orchestration and workflow automation
+EduLearns The Biggest Summer Hackathon - Edulearn
+AI Engineer											       November 2024
+Architected an AI-powered educational platform leveraging multi-agent LLM systems using LangGraph framework to create an intelligent learning: implementing specialized agents for video content summarization, automated assessment generation, and personalized learning pathway recommendations
+Food Blog Application - KMITL Project
+Software Engineer (Back-end)									             August 2024
+Engineered backend systems using golang for a food blog platform, implementing recipe cost calculation algorithms, ingredient management, and advanced search/filter functionalities to enhance recipe discovery
+
+ACTIVITIES
+
+
+Software and Artificial Intelligence Group (SAIG)					      Lat Krabang, Bangkok
+Member of AI team									          August 2023 - Present
+Hosted AI training for 50 computer engineering students at SAIG, covering practical applications and hands-on exercises
+
+NextGen AI Camp @CE KMITL						                   Lat Krabang, Bangkok
+AI staff team						                                                     June 2024 - September2024
+Served as an AI instructor teaching technical concepts (numpy) to high school students
+Provided technical mentorship and consultation to students during AI hackathon events
+EDUCATION
+
+
+King Mongkut's Institute of Technology Ladkrabang				  	      Lat Krabang, Bangkok
+Bachelor of Engineering (Computer Engineering)  				      Expected Graduation: June 2026
+GPA: 3.31/4.00
+Relevant Coursework: Deep Learning, Artificial Intelligence, Image Processing, Probability and Statistics, Object Oriented Programming, Object Oriented Data Structures, Elementary Differential Equations and Linear Algebra, Web Application Development, Principles of Software Development Process
+
+KAGGLE – Yongsuk Prasertsuk
+
+
+Notebook Master (Top ~1% of Kagglers) 
+Notebook medals: 5 Gold, 8 Silver, 8 Bronze
+Published 30+ notebooks showcasing data analysis and machine learning implementations
+Active contributor in AI/ML competitions and knowledge sharing
+
+SUPER AI ENGINEER
+
+
+1st Hackathon Online: PM2.5 Data of Thailand - SuperAI 3 
+ML Engineer											                 May 2023
+Conducted extensive EDA and data preprocessing on Thailand's PM2.5 time series dataset to ensure data quality, and developed ensemble techniques enhanced forecasting models for improved prediction accuracy
+Evaluated model performance using RMSE, demonstrating successful PM2.5 prediction capabilities
+1st Hackathon Online: NLU Intent Classification and Slot Filling - SuperAI 3 
+AI Engineer											             March 2023
+Utilized BERT for intent classification to accurately discern sentence intentions, followed by employing word segmentation and training a Conditional Random Fields (CRF) model for effective slot filling in each word
+4th Hackathon Online: Cloud Recognition for Weather Forecasting - SuperAI 3 
+AI Engineer											                June 2023
+Engineered a cloud classification system for cloud image classification by implementing advanced deep learning techniques, including data augmentation, transfer learning with TIMM models, k-fold cross-validation, and ensemble methods to enhance prediction accuracy
+
+4th Hackathon Onsite: AI for Human Activity Recognition in Wellness Management - SuperAI 4 
+AI Engineer											                 July 2024
+Developed a 9-class classification model for Human Activity Recognition utilizing 6-axis sensor data    (3-axis accelerometer and 3-axis gyroscope), achieving accurate multi-activity classification through signal processing and visualization
+Implemented comprehensive model training and validation processes, optimizing hyperparameters to enhance classification accuracy across diverse human activities
+4th Hackathon Online: Agriculture Classification - SuperAI 4 
+AI Engineer											             August 2024
+Developed a multi-class plant disease classification system analyzing 42 different leaf categories, implementing computer vision techniques including data augmentation, transfer learning with TIMM models, k-fold cross-validation, and ensemble methods to enhance agricultural disease detection accuracy
+4th Hackathon Online: Forecasting Electricity Consumption - SuperAI 4 
+ML Engineer											       September 2024
+Led development of a machine learning model for household electricity consumption forecasting using Provincial Electricity Authority (Thailand) data, implementing comprehensive feature engineering techniques to predict usage patterns and optimize energy distribution
+5th Hackathon Online: Thai Finger-Spelling Recognition - SuperAI 3
+AI Engineer											                 May 2023
+Developed an AI-powered Thai Finger-Spelling Recognition system utilizing advanced computer vision techniques including image preprocessing, data augmentation, k-fold cross-validation, and ensemble learning methods, achieving improved accuracy in sign language interpretation
+
+
+
